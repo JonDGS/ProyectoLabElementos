@@ -8,13 +8,13 @@ Vpower VDD Gnd 5
 Vin1 va Gnd pulse(0,5,0,0,0,0.2u,0.4u)
 Vin2 vb Gnd pulse(0,5,0,0,0,0.1u,0.2u)
 
-M1000 vout va VDD w_n24_n9# pfet w=18 l=3
+M1000 vout va VDD w_n24_n9# pfet w=20 l=3
 +  ad=198 pd=58 as=342 ps=110
-M1001 VDD vb vout w_n24_n9# pfet w=18 l=3
+M1001 VDD vb vout w_n24_n9# pfet w=20 l=3
 +  ad=0 pd=0 as=0 ps=0
-M1002 vout vb a_n5_n39# Gnd nfet w=10 l=3
+M1002 vout vb a_n5_n39# Gnd nfet w=12 l=3
 +  ad=110 pd=42 as=110 ps=42
-M1003 a_n5_n39# va GND Gnd nfet w=10 l=3
+M1003 a_n5_n39# va GND Gnd nfet w=12 l=3
 +  ad=0 pd=0 as=80 ps=36
 C0 w_n24_n9# Gnd 6.55fF
 
@@ -24,4 +24,5 @@ C0 w_n24_n9# Gnd 6.55fF
 .measure tran tpLH_vb trig v(vb) val=2.5 fall=1 targ v(vout) val=2.5 rise=1
 
 .tran 0.01u 0.4u
+
 .end
